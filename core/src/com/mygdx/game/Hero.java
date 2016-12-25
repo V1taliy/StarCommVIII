@@ -17,12 +17,13 @@ public class Hero {
         texture = new Texture("ship80x60.tga");
         position = new Vector2(100, 100);
         speed = 400.0f;
-        fireRate = 4;
+        fireRate = 5;
     }
 
     public void render(SpriteBatch batch) {
         batch.draw(texture, position.x, position.y);
     }
+
 
     public void update(float dt) {
         if(Gdx.input.isKeyPressed(Input.Keys.U)) {
@@ -35,6 +36,8 @@ public class Hero {
         }
         if (Gdx.input.isKeyPressed(Input.Keys.UP)) {
             position.y += speed * dt;
+
+
             if (position.y > 720) {
                 position.y = -60;
             }

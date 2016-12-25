@@ -26,7 +26,7 @@ public class Asteroid {
         speed = 400.0f + (float) Math.random() * 8.0f;
         rect = new Rectangle(position.x, position.y, 60, 60);
         angle = (float) Math.random() * 360;
-        hp = 10;
+        hp = 3;
         if (texture == null) {
             texture = new Texture("asteroid60.tga");
         }
@@ -37,7 +37,7 @@ public class Asteroid {
         position.y = (float) Math.random() * 720;
         speed = 400.0f + (float) Math.random() * 8.0f;
         angle = (float) Math.random() * 360;
-        hp = 30;
+        hp = 10;
     }
 
     public void getDamage(int dmg) {
